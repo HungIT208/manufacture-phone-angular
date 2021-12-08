@@ -17,11 +17,11 @@ export class BaseService {
   ) {
   }
 
-  async getCustomApi(apiMethod: string, params: HttpParams): Promise<ResponseModel> {
-    return await this.httpClient.get<ResponseModel>(`${this.urlName}/${this.apiName}/${apiMethod}`, { params }).toPromise();
+  async getCustomApi(apiMethod: string, params: HttpParams): Promise<any> {
+    return await this.httpClient.get<any>(`${this.urlName}/${this.apiName}/${apiMethod}`, { params }).toPromise();
   }
 
-  async postCustomApi(apiMethod: string, model: object): Promise<ResponseModel> {
-    return await this.httpClient.post<ResponseModel>(`${this.urlName}/${this.apiName}/${apiMethod}`, model).toPromise();
+  async postCustomApi(apiMethod: string, model: object): Promise<any> {
+    return await this.httpClient.post<any>(`${this.urlName}/${this.apiName}/${apiMethod}`, model).toPromise();
   }
 }

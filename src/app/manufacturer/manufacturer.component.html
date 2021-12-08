@@ -335,42 +335,16 @@
   
     <input type="hidden" #selection>
   
-    <div class="card-container">
-      <div class="card card-small" (click)="selection.value = 'component'" tabindex="0" (click)="handleClickManufacturer()">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
+    <div class="card-container" >
+      
+      <div class="card card-small" (click)="selection.value = 'component'" tabindex="0" (click)="handleClickManufacturer(item.id)" *ngFor="let item of data">
+        <img [src]="item.url_ava" width="100%" height="100%" />
+        <!-- <div style="position: relative; bottom: 0">
+          <p>{{ item.name }}</p>
+          <p>{{ item.country }}</p>
+          <p>{{ item.year }}</p>
+        </div> -->
       </div>
-  
-      <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-        <img src="../../assets/food-manufacture-vector-logo.png" width="100%" height="100%" />
-      </div>
-  
+      
     </div>
 </div>

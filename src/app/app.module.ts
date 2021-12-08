@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 import { PhoneComponent } from './phone/phone.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,11 @@ import { PhoneComponent } from './phone/phone.component';
             component: ManufacturerComponent
           },
           {
-            path: 'phone',
+            path: 'phone/:id',
             component: PhoneComponent
           }
-       ])
+       ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

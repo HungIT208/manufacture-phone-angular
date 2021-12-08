@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ManufacturerService } from '../shared/services/manufacturer.service'
 
 @Component({
   selector: 'app-manufacturer',
@@ -9,13 +10,24 @@ import { Router } from '@angular/router';
 export class ManufacturerComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private manufacturerService : ManufacturerService
   ) { }
 
+  data : any;
+
   ngOnInit(): void {
+    this.getAllManufacturer();
   }
 
-  handleClickManufacturer(){
-    this.router.navigate(['phone'])
+  handleClickManufacturer(id: number){
+    this.router.navigate([`phone/${id}`])
+  }
+
+  async getAllManufacturer(){
+    const res = await this.manufacturerService.getAllManufacturer();
+    if(res){
+      this.data = res;
+    }
   }
 }

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "phone-manufacturer"
+    }
+  },
+  "defaultProject": "phone-manufacturer",
+  "cli": {
+    "analytics": "91a1c356-e704-4894-830b-8c1427196763"
+  }
 }

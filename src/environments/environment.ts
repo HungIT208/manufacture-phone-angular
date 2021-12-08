@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://obcapi.stg.rnt.vn/api',
+  url: 'http://localhost:9191',
 
 };
 
